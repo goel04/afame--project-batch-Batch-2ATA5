@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Web Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+    <link rel="icon" type="image/jpg" href="./imgs/favicon.jpg">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo-holder">
+            <div class="logo">LG</div>
+            <div class="logo-text">Portfolio Website</div>
+        </a>
+        <nav>
+            <ul id="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="mailto:hello@adriantwarog.com" class="button">Contact Me</a></li>
+            </ul>
+            <a href="#" class="mobile-toggle" onClick="toggleMobileMenu();">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10"/>
+                </svg>
+            </a>
+        </nav>
+    </header>
+        <section class="hero container">
+            <div class="hero-blue">
+                <div>
+                    <h1><small>Hi I'm</small> Lakshay Goel</h1>
+                    <p>
+                        I am a tech enthusiast with a passion for creating innovative solutions in full-stack development, digital marketing, and content creation.
+                    </p>
+                    <p>
+                        With experience in leading various projects, I have worked on in-house CRM systems, decentralized applications, and SEO-driven marketing strategies.
+                    </p>
+                    <div class="call-to-action">
+                        <a href="Resume_Lakshay_goel.pdf" class="button black">View Resume</a>
+                        <a href="mailto:lakshaygoel611@gmail.com" class="button white">Contact Me</a>
+                    </div>
+					<div class="social-links">
+						<a href="https://github.com/goel04">
+							<img src="logo.png" alt="GitHub logo" width="48" />
+						</a>
+						<a href="https://www.linkedin.com/in/lakshay-goel-b17342287/">
+							<img src="linkedin (1).png" alt="LinkedIn logo" width="48" />
+						</a>
+						<a href="https://devfolio.co/@goellakshay04">
+							<img src="dev.png" alt="devfolio logo" width="70" />
+						</a>
+					</div>
+					
+					
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills container">
+            <h2>Skills</h2>
+            <div class="holder-blue">
+                <div class="left-column">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                    </ul>
+                    <h3>Backend</h3>
+                    <ul>
+                        <li>Node.js</li>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>PHP</li>
+                    </ul>
+                    <h3>Database Management</h3>
+                    <ul>
+                        <li>SQL</li>
+                        <li>MongoDB</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="completed-projects">
+            <h2>Completed Projects</h2>
+            <div class="projects-container" id="projectsContainer"></div>
+        </section>
+		<footer class="bg-gray-900 text-gray-100 py-8">
+			<div class="container mx-auto flex items-start">
+				<div class="max-w-md mx-auto my-10 bg-gray-800 p-5 rounded-md shadow-sm">
+					<div class="text-center">
+						<h1 class="my-3 text-3xl font-semibold">Contact Us</h1>
+						<p class="text-gray-400">Fill up the form below to send us a message.</p>
+					</div>
+					<div class="m-7">
+						<form action="https://api.web3forms.com/submit" method="POST" id="form">
+							<input type="hidden" name="access_key" value="2caba40d-4cca-438a-98ac-e3b3f48c919b" />
+							<input type="hidden" name="subject" value="New Submission from Web3Forms" />
+							<input type="checkbox" name="botcheck" style="display: none;" />
+		
+							<div class="mb-6">
+								<label for="name" class="block mb-2 text-sm text-gray-400">Full Name</label>
+								<input type="text" name="name" id="name" placeholder="Your name" required
+									class="w-full px-3 py-2 h-10 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" />
+							</div>
+							<div class="mb-6">
+								<label for="email" class="block mb-2 text-sm text-gray-400">Email Address</label>
+								<input type="email" name="email" id="email" placeholder="you@company.com" required
+									class="w-full px-3 py-2 h-10 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" />
+							</div>
+							<div class="mb-6">
+								<label for="phone" class="block mb-2 text-sm text-gray-400">Phone Number</label>
+								<input type="text" name="phone" id="phone" placeholder="+91 0000000" required
+									class="w-full px-3 py-2 h-10 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" />
+							</div>
+							<div class="mb-6">
+								<label for="message" class="block mb-2 text-sm text-gray-400">Your Message</label>
+								<textarea rows="4" name="message" id="message" placeholder="Your Message"
+									class="w-full px-3 py-2 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" required></textarea>
+							</div>
+							<div class="mb-6">
+								<button type="submit"
+									class="w-full bg-indigo-600 inline-block text-white no-underline hover:text-indigo-100 py-3 rounded-sm focus:outline-none">
+									Send Message
+								</button>
+							</div>
+							<p class="text-base text-center text-gray-400" id="result"></p>
+						</form>
+					</div>
+				</div>
+		
+				<div class="ml-10 max-w-md">
+					<h2 class="text-2xl font-semibold text-gray-100">Thank You for Reaching Out!</h2>
+					<p class="text-gray-400 mt-2">I appreciate your interest in my work. Your message is important to me, and I’ll do my best to respond as quickly as possible. If you have any specific questions or details you’d like to share, please feel free to include them in your message.</p>
+					<p class="text-gray-400 mt-2">Looking forward to connecting with you!</p>
+					<p class="text-gray-400 mt-2">Best,<br/>Lakshay Goel</p>
+				</div>
+			</div>
+		
+			<script>
+				const form = document.getElementById("form");
+				const result = document.getElementById("result");
+		
+				form.addEventListener("submit", function (e) {
+					e.preventDefault();
+		
+					const formData = new FormData(form);
+					const object = Object.fromEntries(formData);
+					const json = JSON.stringify(object);
+					result.innerHTML = "Please wait...";
+		
+					fetch("https://api.web3forms.com/submit", {
+						method: "POST",
+						headers: {
+							"Content-Type": "application/json",
+							Accept: "application/json",
+						},
+						body: json,
+					})
+						.then(async (response) => {
+							let json = await response.json();
+							if (response.status == 200) {
+								result.innerHTML = json.message;
+								result.classList.remove("text-gray-500");
+								result.classList.add("text-green-500");
+							} else {
+								console.log(response);
+								result.innerHTML = json.message;
+								result.classList.remove("text-gray-500");
+								result.classList.add("text-red-500");
+							}
+						})
+						.catch((error) => {
+							console.log(error);
+							result.innerHTML = "Something went wrong!";
+						})
+						.then(function () {
+							form.reset();
+							setTimeout(() => {
+								result.style.display = "none";
+							}, 5000);
+						});
+				});
+			</script>
+		</footer>
+		<footer class="bg-gray-900 text-gray-100 py-4 text-center">
+			<p>© Lakshay Goel 2024</p>
+		</footer>
+		
+		  
+</body>
+</html>
